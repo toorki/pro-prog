@@ -1,0 +1,47 @@
+// 1
+// v1=[10,2,45]
+// v2=[20,5,4]
+PROCEDURE dot_product(v1,v2:ARRAY_OF INTEGER,dot:INTEGER)
+VAR
+    i:INTEGER
+    dot:0
+BEGIN
+    IF (v1.length<>v2.length) THEN
+        Write("victores are diffrent in size")
+    END_IF
+    WHILE (i<v1.length) DO
+        dot:=dot+v1[i]v2[i]
+        i++
+    END_WHILE
+END
+// 2
+ALGORITHM orth-victors
+VAR
+    v1,v2:ARRAY_OF INTEGER[40]
+    dot:INTEGER
+BEGIN
+    Read(v1)
+    Read(v2)
+    dot_product(v1,v2,dot)
+    IF (dot=0) THEN
+        Write("v1 and v2 are orth")
+    END_IF
+END
+// 3
+ALGORITHM dot_product_function(v1,v2:ARRAY_OF INTEGER):INTEGER
+VAR
+    dot:INTEGER=0
+    i:INTEGER=0
+BEGIN
+     IF (v1.length<>v2.length) THEN
+        Write("victores are diffrent in size")
+    END_IF
+    WHILE (i<v1.length) DO
+        dot:=dot+v1[i]v2[i]
+        i++
+    END_WHILE
+     IF (dot=0) THEN
+        Write("v1 and v2 are orth")
+    END_IF
+    return dot
+END
